@@ -53,7 +53,7 @@ Article.fetchAll = () => {
 
   } else {
 
-    $.getJSON('../data/hackerIpsum.json')
+    $.getJSON(rawDataFile)
       .then(data => {
         localStorage.setItem('rawData', JSON.stringify(data));
         Article.loadAll(data);
@@ -62,6 +62,5 @@ Article.fetchAll = () => {
 
   }
 }
-
 
 Article.fetchAll();
